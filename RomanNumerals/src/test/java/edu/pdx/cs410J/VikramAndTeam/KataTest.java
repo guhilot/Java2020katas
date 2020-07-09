@@ -8,7 +8,6 @@ import static org.junit.Assert.assertTrue;
 
 public class KataTest
 {
-
 //  @Test
 //  public void canInstantiateKataClass()
 //  {
@@ -50,4 +49,13 @@ public class KataTest
     assertThat(Kata.romanNumeralFor(1000), equalTo("M"));
   }
 
+  @Test
+  public void romanNumeralsfor7isVII(){
+    assertThat(Kata.romanNumeralFor(7), equalTo("VII"));
+  }
+
+  @Test
+  public void romanNumeralsfor4isIV(){
+    assertThat(Kata.romanNumeralFor(4), equalTo("IV"));
+  }
 }
