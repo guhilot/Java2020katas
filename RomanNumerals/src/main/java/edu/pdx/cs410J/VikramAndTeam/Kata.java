@@ -7,7 +7,7 @@ package edu.pdx.cs410J.VikramAndTeam;
  * class (and its tests).
  */
 public class Kata {
-                                                                                    
+
 
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
@@ -58,10 +58,11 @@ public class Kata {
         output = output.concat("X");
       }
       i = i % 10;
-    } else if ((i + 1) % 5 == 0) {
+    }
+    if ((i + 1) % 5 == 0) {
       output = output.concat("I");
       output = output.concat("V");
-    }
+    } else {
       if ((i / 5) > 0) {
         vCount = (int) (i / 5);
         for (int j = 0; j < vCount; ++j) {
@@ -72,8 +73,8 @@ public class Kata {
       for (int j = 0; j < i; ++j) {
         output = output.concat("I");
       }
-      return output;
     }
+    return output;
   }
 
     /*
