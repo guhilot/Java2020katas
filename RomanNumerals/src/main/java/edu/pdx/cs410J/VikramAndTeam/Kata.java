@@ -24,53 +24,58 @@ public class Kata {
     int mCount = 0; //thousand
     String output = "";
 
-    if((i / 1000) > 0){
-      mCount = (int) (i/1000);
-      for(int j = 0; j < mCount; ++j){
+    if ((i / 1000) > 0) {
+      mCount = (int) (i / 1000);
+      for (int j = 0; j < mCount; ++j) {
         output = output.concat("M");
       }
       i = i % 1000;
     }
-    if((i / 500) > 0){
-      dCount = (int) (i/500);
-      for(int j = 0; j < dCount; ++j){
+    if ((i / 500) > 0) {
+      dCount = (int) (i / 500);
+      for (int j = 0; j < dCount; ++j) {
         output = output.concat("D");
       }
       i = i % 500;
     }
-    if((i / 100) > 0){
-      cCount = (int) (i/100);
-      for(int j = 0; j < cCount; ++j){
+    if ((i / 100) > 0) {
+      cCount = (int) (i / 100);
+      for (int j = 0; j < cCount; ++j) {
         output = output.concat("C");
       }
       i = i % 100;
     }
-    if((i / 50) > 0){
-      lCount = (int) (i/50);
-      for(int j = 0; j < lCount; ++j){
+    if ((i / 50) > 0) {
+      lCount = (int) (i / 50);
+      for (int j = 0; j < lCount; ++j) {
         output = output.concat("L");
       }
       i = i % 50;
     }
-    if((i / 10) > 0){
-      xCount = (int) (i/10);
-      for(int j = 0; j < xCount; ++j){
+    if ((i / 10) > 0) {
+      xCount = (int) (i / 10);
+      for (int j = 0; j < xCount; ++j) {
         output = output.concat("X");
       }
       i = i % 10;
-    }
-    if((i / 5) > 0){
-      vCount = (int) (i/5);
-      for(int j = 0; j < vCount; ++j){
-        output = output.concat("V");
-      }
-      i = i % 5;
-    }
-    for(int j = 0; j < i; ++j){
+    } else if ((i + 1) % 5 == 0) {
       output = output.concat("I");
+      output = output.concat("V");
     }
-    return output;
+      if ((i / 5) > 0) {
+        vCount = (int) (i / 5);
+        for (int j = 0; j < vCount; ++j) {
+          output = output.concat("V");
+        }
+        i = i % 5;
+      }
+      for (int j = 0; j < i; ++j) {
+        output = output.concat("I");
+      }
+      return output;
+    }
   }
+
     /*
     if (i == 1) {
       return "I";
