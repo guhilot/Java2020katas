@@ -15,14 +15,13 @@ public class Kata {
   }
 
   public static String romanNumeralFor(int i) {
-    if(i == 1)
-    {
+    if (i == 1) {
       return "I";
-    }
-    else{
+    } else if (i == 5) {
       return "V";
+    } else{
+      return "X";
     }
   }
-
 
 }
