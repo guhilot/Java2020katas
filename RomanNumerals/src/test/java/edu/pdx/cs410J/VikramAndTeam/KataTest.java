@@ -30,4 +30,24 @@ public class KataTest
     assertThat(Kata.romanNumeralFor(10), equalTo("X"));
   }
 
+  @Test
+  public void romanNumeralsfor50isL(){
+    assertThat(Kata.romanNumeralFor(50), equalTo("L"));
+  }
+
+  @Test
+  public void romanNumeralsfor100isC(){
+    assertThat(Kata.romanNumeralFor(100), equalTo("C"));
+  }
+
+  @Test
+  public void romanNumeralsfor500isD(){
+    assertThat(Kata.romanNumeralFor(500), equalTo("D"));
+  }
+
+  @Test
+  public void romanNumeralsfor1000isM(){
+    assertThat(Kata.romanNumeralFor(1000), equalTo("M"));
+  }
+
 }

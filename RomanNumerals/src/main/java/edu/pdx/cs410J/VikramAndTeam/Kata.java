@@ -19,8 +19,16 @@ public class Kata {
       return "I";
     } else if (i == 5) {
       return "V";
-    } else{
+    } else if (i == 10){
       return "X";
+    }else if (i == 50){
+      return "L";
+    }else if (i == 100){
+      return "C";
+    }else if (i == 500){
+      return "D";
+    }else{
+      return "M";
     }
   }
 
